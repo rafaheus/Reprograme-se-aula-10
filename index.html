@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Input</title>
+</head>
+
+<body>
+
+    <h1>Tipos de Input</h1>
+    <hr>
+    <p>
+        <input type="text" readonly value="apenasLeitura">
+    </p>
+    <p>
+        <input type="text" disabled value="Desabilitado">
+    </p>
+    <p>
+        <input type="text" size="60" value="Texto tamanho 60">
+    </p>
+
+    <hr>
+
+    <form>
+
+        <input type="text" size="60" value="Texto qualquer requerido" maxlength="20" required>
+        <input type="submit" value="Enviar">
+
+        <input type="text" size="60" value="Texto qualquer requerido com autofocus" maxlength="20" required autofocus>
+        <input type="submit" value="Enviar">
+
+    </form>
+    <hr>
+    <form>
+
+        <input type="text" size="60" maxlength="20" required name="campo2" id="campo2"><br>
+
+        <input type="text" size="60" maxlength="20" required name="campo1" id="campo1" autocomplete="off"><br>
+        <input type="submit" value="Enviar">
+
+    </form>
+    <hr>
+    <form>
+
+        <input type="text" size="60" maxlength="20" required name="campo2" id="campo2" autofocus list="minhalista"
+            placeholder="Digite aqui o seu nome"><br>
+
+        <datalist id="minhalista">
+            <option value="valor1"></option>
+            <option value="valor2"></option>
+            <option value="valor3"></option>
+        </datalist>
+        <input type="submit" value="Enviar">
+
+    </form>
+    <hr>
+    <form>
+        Placa de Carro
+        <input type="text" pattern="[A-Z]{3}-[0-9]{4}" required placeholder="ABC-1010"><br>
+        Celular
+        <input type="text" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required placeholder="(99) 99999-9999"><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form action="form">
+        Password <br>
+        <input type="password"> <br>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+
+    <form action="form">
+        Radio <br>
+        <input type="radio" name="Estado Civil" value="C" required>Casado<br>
+        <input type="radio" name="Estado Civil" value="S">Solteiro<br>
+        <input type="radio" name="Estado Civil" value="O">Outros<br>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form action="form">
+        Radio <br>
+        <input type="radio" name="Estado Civil" value="C" required disabled>Casado<br>
+        <input type="radio" name="Estado Civil" value="S">Solteiro<br>
+        <input type="radio" name="Estado Civil" value="O">Outros<br>
+        <input type="reset" value="Limpar" disabled>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form action="form">
+        Checkbox <br>
+        <input type="checkbox" name="noticias" value="N">Noticias<br>
+        <input type="checkbox" name="promocoes" value="P">Promoções<br>
+        <input type="checkbox" name="alertas" value="A">Alertas<br>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Gera mensagem
+        <input type="button" value="Enviar" onclick="alert('Mensagem');">
+        Envia p servidor
+        <input type="button" value="Enviar" onclick="this.form.submit();">
+    </form>
+    <hr>
+    <form>
+        Cor <br>
+        <input type="color">
+    </form>
+    <hr>
+    <form>
+        Data <br>
+        <input type="date" min="1979-05-20" max="1980-05-20">
+    </form>
+    <hr>
+    <form>
+        datetime-local <br>
+        <input type="date" min="1979-05-20T00:00:00" max="1980-05-20T17:00:00"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Email <br>
+        <input type="email">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        File <br>
+        <input type="file">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Hidden <br>
+        <input type="hidden" name="id" value="451">
+        <input type="text" name="nomeCompleto">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Mês <br>
+        <input type="hidden" name="id" value="451">
+        <input type="month" name="mesNascimento" min="2020-12" max="2021-05">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Number <br>
+        <input type="hidden" name="id" value="451">
+        <input type="number" name="valor" min="100" max="1000" step="50">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Range <br>
+        <input type="hidden" name="id" value="451">
+        <input type="range" name="valor" min="100" max="1000" step="50">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <form>
+        Search <br>
+        <input type="hidden" name="id" value="451">
+        <input type="search" name="termo">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Telefone <br>
+        <input type="hidden" name="id" value="451">
+        <input type="tel" name="telefone" pattern="[0-9]{2} [o-9]{5}-[0-9]{4}">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Time <br>
+        <input type="hidden" name="id" value="451">
+        <input type="time" name="horaMarcada" min="00:00:00" max="18:00:00">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        URL <br>
+        <input type="hidden" name="id" value="451">
+        <input type="url" name="enderecoSite">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <form>
+        Semana <br>
+        <input type="hidden" name="id" value="451">
+        <input type="week" name="semanaCongresso" min="2021-W18" max="2021-W25">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
